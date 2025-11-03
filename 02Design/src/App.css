@@ -1,0 +1,130 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  border-right: 1px solid #eee;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #1a73e8;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav li:hover {
+  background-color: #e8f0fe;
+}
+
+.nav li.active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.logout-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.card-group {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.courses-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 240px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin: 10px 0;
+}
+
+.progress {
+  background: #1a73e8;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.reminder-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reminder-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}

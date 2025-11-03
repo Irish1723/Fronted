@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f8fc;
+  color: #333;
+}
+
+h2 {
+  color: #1a73e8;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}

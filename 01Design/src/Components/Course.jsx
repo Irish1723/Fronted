@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./Course.css"
 
 const allCourses = [
   {

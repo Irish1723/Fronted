@@ -1,18 +1,29 @@
-export default function Sidebar({ setIsAuthenticated }) {
+import React from "react";
+import "./Sidebar.css";
+
+export default function Sidebar({ setActiveSection, activeSection, setIsAuthenticated }) {
+  const menuItems = ["Dashboard", "Courses", "Attendance", "Feedback"];
+
   return (
     <div className="sidebar">
       <div>
         <h1>LearnThru</h1>
         <nav>
-          <a href="#">Dashboard</a>
-          <a href="#">Courses</a>
-          <a href="#">Attendance</a>
-          <a href="#">Feedback</a>
+          {menuItems.map((item) => (
+            <button
+              key={item}
+              className={`sidebar-link ${activeSection === item ? "active" : ""}`}
+              onClick={() => setActiveSection(item)}
+            >
+              {item}
+            </button>
+          ))}
         </nav>
       </div>
+
       <button className="logout-btn" onClick={() => setIsAuthenticated(false)}>
         Logout
       </button>
     </div>
-  )
+  );
 }

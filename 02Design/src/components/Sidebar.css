@@ -1,0 +1,94 @@
+/* src/components/Sidebar.css */
+
+/* Sidebar container */
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  border-right: 1px solid #eee;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Logo / title */
+.logo {
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 28px 0;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+/* Navigation list */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.nav li {
+  padding: 11px 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.08s ease;
+  color: #333;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Hover / focus */
+.nav li:hover,
+.nav li:focus {
+  background-color: #f2f6ff;
+  transform: translateY(-1px);
+}
+
+/* Active item */
+.nav li.active {
+  background-color: #1a73e8;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(26,115,232,0.12);
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #ef466f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 18px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(239,70,111,0.12);
+}
+
+/* Small adjustments for mobile / narrower screens */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 64px;
+    padding: 18px 10px;
+  }
+
+  .logo {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .nav li {
+    padding: 8px 6px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .logout-btn {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

@@ -1,9 +1,8 @@
-import Course from "./Course.jsx";
-import Attendance from "./Attendance.jsx";
-import Feedback from "./Feedback.jsx";
-import ProfileCard from "./Profile.jsx";
-import CalenderCard from "./CalenderCard.jsx"; 
-
+import Course from "../Components/Course";
+import Attendance from "../Components/Attendance";
+import Feedback from "../Components/Feedback";
+import ProfileCard from "../Components/Profile";
+import CalenderCard from "../Components/CalenderCard";
 
 export default function Dashboard() {
   return (
@@ -21,4 +20,4 @@ export default function Dashboard() {
       <CalenderCard/> 
     </div>
   );
-}
+};
