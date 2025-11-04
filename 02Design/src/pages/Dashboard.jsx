@@ -7,7 +7,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <h2>Welcome back, Ansh Pal!</h2>
       <p className="subtitle">
-        Here’s an overview of your recent classes and progress.
+        Here’s an overview of your recent classes.
       </p>
 
       <DashboardCard />

@@ -5,6 +5,8 @@ import Courses from "./pages/Courses";
 import Attendance from "./pages/Attendance";
 import Feedback from "./pages/Feedback";
 import "./App.css";
+import LiveClass from "./pages/CLass";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const [activePage, setActivePage] = useState("Dashboard");
@@ -13,6 +15,14 @@ const App = () => {
     switch (activePage) {
       case "Dashboard":
         return <Dashboard />;
+      case "Live Classes":
+         return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<CalendarCard />} />
+        <Route path="/live/:classTitle" element={<LiveClass />} />
+      </Routes>
+    </Router>)
       case "Courses":
         return <Courses />;
       case "Attendance":
@@ -34,6 +44,7 @@ const App = () => {
       <div className="content">{renderPage()}</div>
     </div>
   );
+  
 };
 
 export default App;

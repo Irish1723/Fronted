@@ -1,7 +1,11 @@
 import React from "react";
 import "./CalenderCard.css";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 const CalendarCard = () => {
+  const navigate = useNavigate();
+
   const classes = [
     { date: "Nov 5", title: "Grammar Workshop", time: "10:00 AM" },
     { date: "Nov 6", title: "Speaking Practice", time: "2:00 PM" },
@@ -24,14 +28,16 @@ const CalendarCard = () => {
                 className="calendar-item"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.28, delay: i*0.05 }}
+                transition={{ duration: 0.28, delay: i*0.05 }
+                }
               >
                 <div className="calendar-date">{cls.date}</div>
                 <div className="calendar-details">
                   <p className="class-title">{cls.title}</p>
                   <p className="class-time">{cls.time}</p>
                 </div>
-                <button className="join-btn">Join Now</button>
+                <button className="join-btn"
+                onClick={() => navigate(`/live/${encodeURIComponent(cls.title)}`)}>Join Now</button>
               </motion.div>
             ))}
           </div>
