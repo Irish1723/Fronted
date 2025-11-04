@@ -12,7 +12,7 @@ const Sidebar = ({ activePage, setActivePage }) => {
 
   return (
     <div className="sidebar">
-      <h2 className="logo">LearnThru</h2>
+      <h2 className="logo">Athena LMS</h2>
       <ul className="nav">
         {menuItems.map((item) => (
           <li

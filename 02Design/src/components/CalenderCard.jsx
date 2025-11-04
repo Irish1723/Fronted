@@ -26,6 +26,7 @@ const CalendarCard = () => {
             {classes.map((cls, i) => (
               <motion.div
                 className="calendar-item"
+                key={`${cls.date}-${cls.title}`}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.28, delay: i*0.05 }
