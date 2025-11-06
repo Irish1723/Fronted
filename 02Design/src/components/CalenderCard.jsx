@@ -38,7 +38,7 @@ const CalendarCard = () => {
                   <p className="class-time">{cls.time}</p>
                 </div>
                 <button className="join-btn"
-                onClick={() => navigate(`/live/${encodeURIComponent(cls.title)}`)}>Join Now</button>
+                 onClick={() =>window.open(`/class/${encodeURIComponent(cls.title)}`, "_blank")}>Join Now</button>
               </motion.div>
             ))}
           </div>

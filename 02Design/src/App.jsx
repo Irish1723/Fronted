@@ -5,8 +5,9 @@ import Courses from "./pages/Courses";
 import Attendance from "./pages/Attendance";
 import Feedback from "./pages/Feedback";
 import "./App.css";
-import LiveClass from "./pages/CLass";
-import { BrowserRouter } from "react-router-dom";
+import LiveClass from "./pages/Class";
+import ChatBot from "./components/Chatbot"; 
+import { Routes,Route } from "react-router-dom";
 
 const App = () => {
   const [activePage, setActivePage] = useState("Dashboard");
@@ -16,13 +17,7 @@ const App = () => {
       case "Dashboard":
         return <Dashboard />;
       case "Live Classes":
-         return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<CalendarCard />} />
-        <Route path="/live/:classTitle" element={<LiveClass />} />
-      </Routes>
-    </Router>)
+         return (<LiveClass />);
       case "Courses":
         return <Courses />;
       case "Attendance":
@@ -35,15 +30,18 @@ const App = () => {
   };
 
   useEffect(() => {
-    document.title = `${activePage} | LearnThru`;
+    document.title = `${activePage} | Athena LMS`;
   }, [activePage]);
 
   return (
     <div className="app-container">
       <Sidebar activePage={activePage} setActivePage={setActivePage} />
       <div className="content">{renderPage()}</div>
+      <ChatBot />
     </div>
   );
+
+
   
 };
 
