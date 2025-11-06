@@ -24,7 +24,6 @@ function ChatBot() {
       const botMessage = { sender: "bot", text: res.data.reply };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
-      console.error(error);
       const errMessage = {
         sender: "bot",
         text: "⚠️ Something went wrong. Please try again.",
