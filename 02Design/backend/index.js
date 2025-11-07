@@ -10,10 +10,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// Register Routes BEFORE app.listen
 app.use("/api", deepseekRoutes);
+app.use("/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
-
-app.use("/auth", authRoutes);

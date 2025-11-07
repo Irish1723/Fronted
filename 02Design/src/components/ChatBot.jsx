@@ -19,9 +19,8 @@ function ChatBot({ onClose }) {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/deepseek", {
-        message: input,
-      });
+      const res = await axios.post("http://localhost:5000/api/deepseek", { message: input });
+
       const botMessage = { sender: "bot", text: res.data.reply };
       setMessages((prev) => [...prev, botMessage]);
     } catch {
