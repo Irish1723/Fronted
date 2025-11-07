@@ -1,26 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 
+const menuItems = [
+  {label: "Dashboard", route: "/dashboard"},
+  {label: "Courses", route: "/courses"},
+  {label: "Attendance", route: "/attendance"},
+  {label: "Feedback", route: "/feedback"},
+  {label: "Virtual Instructor", route: "/virtual-instructor"},
+];
+
 const Sidebar = ({ activePage, setActivePage }) => {
+  const location = useLocation();
   const [highlight, setHighlight] = useState(activePage);
 
   useEffect(() => {
     setHighlight(activePage);
   }, [activePage]);
 
-  const menuItems = ["Dashboard", "Courses", "Attendance", "Feedback"];
-
   return (
     <div className="sidebar">
-      <h2 className="logo">Athena LMS</h2>
       <ul className="nav">
         {menuItems.map((item) => (
           <li
-            key={item}
-            className={highlight === item ? "active" : ""}
-            onClick={() => setActivePage(item)}
+            key={item.label}
+            className={location.pathname === item.route ? "active" : ""}
+            onClick={() => setActivePage(item.label)}
           >
-            {item}
+            <Link to={item.route}>
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>

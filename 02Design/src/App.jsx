@@ -1,48 +1,33 @@
-import React, { useState, useEffect } from "react";
-import Sidebar from "./components/Sidebar";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Courses from "./pages/Courses";
 import Attendance from "./pages/Attendance";
 import Feedback from "./pages/Feedback";
-import "./App.css";
 import LiveClass from "./pages/Class";
-import ChatBot from "./components/Chatbot"; 
-import { Routes,Route } from "react-router-dom";
+import VirtualInstructor from "./pages/VirtualInstructor";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import "./App.css";
 
-const App = () => {
-  const [activePage, setActivePage] = useState("Dashboard");
-
-  const renderPage = () => {
-    switch (activePage) {
-      case "Dashboard":
-        return <Dashboard />;
-      case "Live Classes":
-         return (<LiveClass />);
-      case "Courses":
-        return <Courses />;
-      case "Attendance":
-        return <Attendance />;
-      case "Feedback":
-        return <Feedback />;
-      default:
-        return <Dashboard />;
-    }
-  };
-
-  useEffect(() => {
-    document.title = `${activePage} | Athena LMS`;
-  }, [activePage]);
-
+const AppLayout = ({ activePage, setActivePage }) => {
   return (
     <div className="app-container">
-      <Sidebar activePage={activePage} setActivePage={setActivePage} />
-      <div className="content">{renderPage()}</div>
-      <ChatBot />
+      <Header />
+      <div className="main-content">
+        <Sidebar activePage={activePage} setActivePage={setActivePage} />
+        <div className="page-content">
+          <Routes>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="live-classes" element={<LiveClass />} />
+            <Route path="courses" element={<Courses />} />
+            <Route path="attendance" element={<Attendance />} />
+            <Route path="feedback" element={<Feedback />} />
+            <Route path="virtual-instructor" element={<VirtualInstructor />} />
+            <Route path="*" element={<Navigate to="dashboard" />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
-
-
-  
-};
-
-export default App;
+  };
+export default AppLayout;
