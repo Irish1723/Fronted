@@ -1,0 +1,12 @@
+:root {
+  --primary-blue: #256efb;
+  --blue-light: #f7fafd;
+  --blue-gradient: linear-gradient(90deg,#256efb 74%, #5ea2fa 156%);
+  --text-dark: #1c2859;
+  --divider: #e6eaf1;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--blue-light);
+  color: var(--text-dark);
+}
