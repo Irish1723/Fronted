@@ -1,0 +1,94 @@
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+.sidebar-menu li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.25s ease;
+}
+
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+/* ====== SWITCH BUTTON ====== */
+.switch-btn {
+  background: #e0e7ff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.switch-btn:hover {
+  background: #c7d2fe;
+}
+
+/* ====== ADMIN INFO ====== */
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.avatar {
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-name {
+  font-weight: 600;
+}
+
+.admin-role {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none; /* hide sidebar on smaller screens */
+  }
+}

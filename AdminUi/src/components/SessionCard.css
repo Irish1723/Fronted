@@ -1,0 +1,112 @@
+/* ====== SESSIONS GRID ====== */
+.sessions-section {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ====== SESSION CARD ====== */
+.session-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* ====== CONTENT ====== */
+.session-info {
+  margin-bottom: 12px;
+}
+
+.session-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.session-details {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* ====== FOOTER ====== */
+.session-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ====== STATUS TAGS ====== */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.status.active {
+  background: #e0edff;
+  color: #1a73e8;
+}
+
+.status.scheduled {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.status.completed {
+  background: #f1f3f4;
+  color: #5f6368;
+}
+
+/* ====== ACTION BUTTONS ====== */
+.action-btn {
+  border: none;
+  background: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background: #e0e0e0;
+}
+
+.action-btn.delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.action-btn.delete:hover {
+  background: #fecaca;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .sessions-section {
+    grid-template-columns: 1fr;
+  }
+}
+    
