@@ -110,7 +110,7 @@
 .vi-chat-message {
   font-size: 0.96rem;
   line-height: 1.4;
-  color: #465570;
+  color: #476293;
   padding: 10px 14px;
   border-radius: 12px;
   word-wrap: break-word;
@@ -133,7 +133,7 @@
 
 /* Chat input */
 .vi-chat-input {
-  border: 1px solid #c7d3e2;
+  border: 1px solid #1c6ac9;
   border-radius: 6px;
   padding: 9px 12px;
   font-size: 0.97rem;
