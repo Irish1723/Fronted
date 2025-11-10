@@ -55,9 +55,7 @@ export default function ManageSessions() {
           <button className="create-btn" onClick={handleCreate}>
             + Create New Session
           </button>
-          <button className="modal-btn" onClick={() => setIsModalOpen(true)}>
-            View in Modal
-          </button>
+          
         </div>
       </div>
 

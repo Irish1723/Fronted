@@ -92,3 +92,21 @@
     display: none; /* hide sidebar on smaller screens */
   }
 }
+.sidebar-menu li {
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu li.active {
+  background-color: #1e90ff;
+  color: white;
+  font-weight: 500;
+  border-left: 4px solid #00bfff;
+}

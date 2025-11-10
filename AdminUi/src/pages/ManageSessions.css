@@ -1,7 +1,9 @@
+/* ===== MAIN CONTAINER ===== */
 .manage-container {
   padding: 20px 30px;
 }
 
+/* ===== HEADER ===== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -37,12 +39,14 @@
   transform: translateY(-2px);
 }
 
+/* ===== SECTION TITLES ===== */
 .section-title {
   margin-bottom: 15px;
   font-size: 1.25rem;
   font-weight: 600;
   color: #111827;
 }
+
 /* ===== MAIN WRAPPER ===== */
 .sessions-wrapper {
   display: flex;
@@ -58,13 +62,6 @@
   max-width: 260px;
 }
 
-.section-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 8px;
-}
-
 .section-note {
   font-size: 0.95rem;
   color: #6b7280;
@@ -74,12 +71,31 @@
 /* ===== RIGHT GRID ===== */
 .sessions-right {
   flex: 3;
+  width: 100%;
 }
 
+/* ✅ FIXED GRID — Responsive & Consistent Layout */
 .sessions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* ===== CARD STYLING (optional, in case you need it) ===== */
+.session-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -92,4 +108,39 @@
     max-width: 100%;
     margin-bottom: 20px;
   }
+}
+/* ===== MODAL OVERLAY ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(31, 41, 55, 0.4); /* semi-transparent dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ===== MODAL CARD ===== */
+.modal-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 32px 24px;
+  min-width: 320px;
+  max-width: 95vw;
+  max-height: 95vh;
+  position: relative;
+  /* You can reuse .session-card styles */
+}
+
+/* ===== CLOSE BUTTON ===== */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #6b7280;
+  cursor: pointer;
 }

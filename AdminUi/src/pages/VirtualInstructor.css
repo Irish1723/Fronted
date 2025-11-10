@@ -1,0 +1,169 @@
+/* VirtualInstructor.css */
+
+.virtual-instructor {
+  background: #f8fafc; /* Slightly blue-gray */
+  min-height: 100vh;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* --- SESSION BOX --- */
+.vi-session-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(16, 42, 73, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 28px;
+  gap: 32px;
+}
+
+.vi-session-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  min-width: 320px;
+}
+
+.vi-session-icon {
+  background: #edf2fa;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vi-session-icon::before {
+  content: "📹";
+  font-size: 32px;
+}
+
+.vi-session-status {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #14345c;
+}
+
+.vi-session-desc {
+  color: #465570;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.vi-session-btn {
+  background: #2164f4;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 9px;
+  padding: 10px 32px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.vi-session-btn:hover {
+  background: #14345c;
+}
+
+/* --- CHAT SECTION --- */
+.vi-session-chat {
+  flex: 1;
+  background: #f7fafd;
+  border-radius: 12px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+}
+
+.vi-chat-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #14345c;
+}
+
+/* ✅ Fixed chat box layout */
+.vi-chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 12px;
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 1px 2px rgba(16, 42, 73, 0.06);
+  border: 1px solid #e0e6ed;
+}
+
+/* Message bubbles */
+.vi-chat-message {
+  font-size: 0.96rem;
+  line-height: 1.4;
+  color: #465570;
+  padding: 10px 14px;
+  border-radius: 12px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 80%;
+}
+
+/* AI message (left aligned) */
+.ai-msg {
+  background-color: #e3f2fd;
+  align-self: flex-start;
+}
+
+/* User message (right aligned) */
+.user-msg {
+  background-color: #d2f8d2;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Chat input */
+.vi-chat-input {
+  border: 1px solid #c7d3e2;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-size: 0.97rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.vi-chat-input:focus {
+  border-color: #2164f4;
+  box-shadow: 0 0 0 2px rgba(33, 100, 244, 0.15);
+}
+
+/* --- COURSE LIST --- */
+.vi-course-list {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(16, 42, 73, 0.08);
+  border-radius: 14px;
+  padding: 22px;
+  min-width: 270px;
+}
+
+.vi-course-list h3 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #14345c;
+  margin-bottom: 7px;
+}
+
+.vi-course-list > div {
+  font-size: 1rem;
+  color: #465570;
+  margin-bottom: 2px;
+}
+

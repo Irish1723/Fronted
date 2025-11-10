@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import deepseekRoutes from "./Deepseekroutes.js";
-import authRoutes from "./routes/authRoutes.js";
+import deepseekRoutes from "./routes/Deepseekroutes.js";
 
 dotenv.config();
 
